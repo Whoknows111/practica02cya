@@ -14,16 +14,14 @@ void Symbol::addChar(char newChar) {
 }
 
 void Symbol::printSymbol(){
-  for (int i = 0; i < Symbol::mySymbol_.size(); i++)
-  {
-    /* code */
+  for (int i = 0; i < Symbol::mySymbol_.size(); i++){
+    std::cout << Symbol::mySymbol_[i];
   }
-  
+  std::cout << std::endl;
 }
-  //std::cout << symbol::mySymbol_[0] << std::endl;
 
-std::vector<char>& Symbol::getSymbolValue(){
-  return Symbol::mySymbol_;
+char Symbol::getSymbolValue(){
+  return Symbol::mySymbol_[0];
 }
 
 

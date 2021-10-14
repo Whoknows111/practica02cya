@@ -13,9 +13,10 @@ public:
   ~Symbol();
 
   void addChar(char);
-  int getSize();
-  std::vector<char>& getSymbolValue();
   void printSymbol();
+  
+  int getSize();
+  char getSymbolValue();
 };
 
 

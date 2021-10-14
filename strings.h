@@ -7,17 +7,20 @@
 class Strings
 {
 private:
-    Alphabet myAlphabet_;
-    int stringSize_ = 0;
-    std::vector<Symbol> stringSymbols_;
+  //Alphabet myAlphabet_;
+  int stringLength_ ;
+  std::vector<Symbol> stringSymbols_;
 
 public:
-    Strings(Symbol);
-    ~Strings();
+  Strings(Symbol);
+  ~Strings();
 
-    void operaciones(int);
-    void addSymbol(Symbol);
-    Strings& stringReverse();
+  void addSymbol(Symbol);
+
+  int getLenght();
+  Strings & stringReverse();
+  
+  void operaciones(int);
 };
 
 

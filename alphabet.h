@@ -7,14 +7,18 @@ class Alphabet
 {
 private:
     std::vector<Symbol> arraySymbol_;
-    
+
 public:
-    Alphabet(/* args */);
+    Alphabet(Symbol);
     ~Alphabet();
 
-    void addSymbol(std::vector<char>);
+    void addSymbol(Symbol);
     void printAlphabet();
 };
 
+/*ostream& operator<<(operator<<(ostream& os, Symbol mySymbol){
+    os << mySymbol.printSymbol();
+    return os;
+}*/
 
 
