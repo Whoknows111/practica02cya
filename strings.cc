@@ -1,13 +1,18 @@
 #include "strings.h"
 
 //Constructor
-strings::strings()
+Strings::Strings(Symbol newSymbol)
 {
+  //Symbol A('&');
+  Strings::addSymbol(newSymbol);
+  //Strings::stringSize_ = 0;
 }
 
 //Destructor
-strings::~strings()
+Strings::~Strings()
 {
 }
 
-
+void Strings::addSymbol(Symbol newSymbol){
+  Strings::stringSymbols_.push_back(newSymbol);
+}

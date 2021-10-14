@@ -1,22 +1,29 @@
 #include "symbol.h"
 
-symbol::symbol()
+Symbol::Symbol(char newChar)
+{
+  addChar(newChar);
+}
+
+Symbol::~Symbol()
 {
 }
 
-symbol::~symbol()
-{
+void Symbol::addChar(char newChar) {
+  Symbol::mySymbol_.push_back(newChar);
 }
 
-void symbol::addChar(char newChar) {
-  symbol::mySymbol_.push_back(newChar);
-}
-
-void symbol::printSymbol(){
+void Symbol::printSymbol(){
+  for (int i = 0; i < Symbol::mySymbol_.size(); i++)
+  {
+    /* code */
+  }
   
 }
   //std::cout << symbol::mySymbol_[0] << std::endl;
 
-
+std::vector<char>& Symbol::getSymbolValue(){
+  return Symbol::mySymbol_;
+}
 
 

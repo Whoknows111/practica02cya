@@ -2,17 +2,20 @@
 #include <iostream>
 #include <vector>
 
-class symbol
+class Symbol
 {
 private:
   std::vector<char> mySymbol_;
   int size_ = 1;
+
 public:
-  symbol();
-  ~symbol();
+  Symbol(char newChar);
+  ~Symbol();
+
   void addChar(char);
-  void printSymbol();
   int getSize();
+  std::vector<char>& getSymbolValue();
+  void printSymbol();
 };
 
 

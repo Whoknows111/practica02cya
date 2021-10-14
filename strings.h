@@ -1,15 +1,23 @@
 #pragma once
 #include <iostream>
 #include <vector>
+#include "alphabet.h"
 
 
-class strings
+class Strings
 {
 private:
-    /* data */
+    Alphabet myAlphabet_;
+    int stringSize_ = 0;
+    std::vector<Symbol> stringSymbols_;
+
 public:
-    strings(/* args */);
-    ~strings();
+    Strings(Symbol);
+    ~Strings();
+
+    void operaciones(int);
+    void addSymbol(Symbol);
+    Strings& stringReverse();
 };
 
 

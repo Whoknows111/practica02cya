@@ -6,8 +6,7 @@
 
 int main () {
   
-  symbol A;
-  A.addChar('a');
+  Symbol A('a');
 
   return 0;
 }
