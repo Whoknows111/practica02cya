@@ -18,7 +18,10 @@ public:
   void addSymbol(Symbol);
 
   int getLenght();
-  Strings & stringReverse();
+  Strings stringReverse();
+  std::vector<std::vector<Symbol> > getPrefixes();
+  std::vector<std::vector<Symbol> > getSuffixes();
+  std::vector<std::vector<Symbol> > getSubstrings();
   
   void operaciones(int);
 };

@@ -16,7 +16,7 @@ public:
   void printSymbol();
   
   int getSize();
-  char getSymbolValue();
+  char getSetSymbol();
 };
 
 

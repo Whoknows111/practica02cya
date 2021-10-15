@@ -27,6 +27,32 @@ int Strings::getLenght(){
   return Strings::stringLength_;
 }
 
+Strings Strings::stringReverse(){
+  Strings newString;
+  for (int i = Strings::stringSymbols_.size() - 1; i >= 0; i--)
+  {
+    newString.addSymbol(Strings::stringSymbols_[i]);
+  }
+  return newString;
+}
 
+std::vector<std::vector<Symbol> > Strings::getPrefixes(){
+  std::vector<std::vector<Symbol> > myPrefixes;
+  /*for (int i = 0; i < count; i++)
+    for (int j = 0; j < count; j++)
+    {
+        
+    }
+  //hacer pushfront de &
+  */
+}
+
+std::vector<std::vector<Symbol> > Strings::getSuffixes(){
+
+}
+
+std::vector<std::vector<Symbol> > Strings::getSubstrings(){
+
+}
 
 

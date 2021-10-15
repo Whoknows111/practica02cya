@@ -11,6 +11,7 @@ int main () {
   A.printSymbol();
 
   Strings B();
+  
 
   return 0;
 }
