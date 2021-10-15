@@ -2,13 +2,13 @@
 #include <iostream>
 #include <vector>
 #include "alphabet.h"
+#include "strings.h"
 
 
 class Strings
 {
 private:
   //Alphabet myAlphabet_;
-  int stringLength_ ;
   std::vector<Symbol> stringSymbols_;
 
 public:
@@ -24,6 +24,7 @@ public:
   std::vector<Strings> getSubstrings();
   
   void operaciones(int);
+  void printString();
 };
 
 

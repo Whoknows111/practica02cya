@@ -2,8 +2,10 @@
 
 //Constructor
 Strings::Strings(Symbol newSymbol){
+  if (newSymbol.getSymbol() == "")
+    Strings::stringSymbols_[0].setSymbol("&");
+  else
     Strings::addSymbol(newSymbol);
-    Strings::stringLength_ = 1;
 }
 
 //Destructor
@@ -12,29 +14,27 @@ Strings::~Strings()
 }
 
 void Strings::addSymbol(Symbol newSymbol){
-  /*if (newSymbol.getSetSymbol() != '&')
-    Strings::stringSymbols_.push_back(newSymbol);
-  else
+  if (Strings::stringSymbols_[0].getSymbol() == "&")
     Strings::stringSymbols_[0] = newSymbol;
-  
-  Strings::stringLength_ += 1;*/
+  else
+    Strings::stringSymbols_.push_back(newSymbol);
 }
 
 int Strings::getLenght(){
-  return Strings::stringLength_;
+ return Strings::stringSymbols_.size();
 }
 
 Strings Strings::stringReverse(){
-  /*Strings newString("");
+  Strings newString(Symbol(""));
   for (int i = Strings::stringSymbols_.size() - 1; i >= 0; i--)
   {
     newString.addSymbol(Strings::stringSymbols_[i]);
   }
-  return newString;*/
+  return newString;
 }
 
 std::vector<Strings> Strings::getPrefixes(){
-  std::vector<std::vector<Symbol> > myPrefixes;
+  //std::vector<Strings> myPrefixes;
   /*for (int i = 0; i < count; i++)
     for (int j = 0; j < count; j++)
     {
@@ -52,4 +52,12 @@ std::vector<Strings> Strings::getSubstrings(){
 
 }
 
+
+void Strings::printString(){
+  std::cout << "String = ";
+  for (int i = 0; i < Strings::stringSymbols_.size(); i++){
+    Strings::stringSymbols_[i].printSymbol();
+  }
+  std::cout << std::endl;
+}
 

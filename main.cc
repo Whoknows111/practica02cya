@@ -23,6 +23,13 @@ int main () {
   C.addSymbol(B);
   C.printAlphabet();
 
+  Strings D(A);
+  Strings E(A);
+  D.addSymbol(B);
+  D.printString();
+  //E = D.stringReverse();
+  //E.printString();
+
   
 
   return 0;
