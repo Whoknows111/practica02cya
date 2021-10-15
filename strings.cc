@@ -2,9 +2,6 @@
 
 //Constructor
 Strings::Strings(Symbol newSymbol){
-  if (newSymbol.getSymbol() == "")
-    Strings::stringSymbols_[0].setSymbol("&");
-  else
     Strings::addSymbol(newSymbol);
 }
 
@@ -14,10 +11,7 @@ Strings::~Strings()
 }
 
 void Strings::addSymbol(Symbol newSymbol){
-  if (Strings::stringSymbols_[0].getSymbol() == "&")
-    Strings::stringSymbols_[0] = newSymbol;
-  else
-    Strings::stringSymbols_.push_back(newSymbol);
+  Strings::stringSymbols_.push_back(newSymbol);
 }
 
 int Strings::getLenght(){
@@ -34,14 +28,14 @@ Strings Strings::stringReverse(){
 }
 
 std::vector<Strings> Strings::getPrefixes(){
-  //std::vector<Strings> myPrefixes;
-  /*for (int i = 0; i < count; i++)
-    for (int j = 0; j < count; j++)
+ /* std::vector<Strings> myPrefixes;
+  for (int i = 0; i < Strings::getLenght(); i++)
+    for (int j = 0; j <= i; j++)
     {
-        
-    }
+      myPrefixes.push_back()
+    }*/
   //hacer pushfront de &
-  */
+  
 }
 
 std::vector<Strings> Strings::getSuffixes(){
