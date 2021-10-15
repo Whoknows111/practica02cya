@@ -1,22 +1,21 @@
 #pragma once
 #include <iostream>
-#include <vector>
+#include <string>
 
 class Symbol
 {
 private:
-  std::vector<char> mySymbol_;
-  int size_ = 1;
+  std::string mySymbol_;
 
 public:
-  Symbol(char newChar);
+  Symbol(std::string);
+  Symbol();
   ~Symbol();
 
-  void addChar(char);
-  void printSymbol();
+  std::string getSetSymbol();
   
-  int getSize();
-  char getSetSymbol();
+  void addToSymbol(std::string);
+  void printSymbol();
 };
 
 

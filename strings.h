@@ -19,9 +19,9 @@ public:
 
   int getLenght();
   Strings stringReverse();
-  std::vector<std::vector<Symbol> > getPrefixes();
-  std::vector<std::vector<Symbol> > getSuffixes();
-  std::vector<std::vector<Symbol> > getSubstrings();
+  std::vector<Strings> getPrefixes();
+  std::vector<Strings> getSuffixes();
+  std::vector<Strings> getSubstrings();
   
   void operaciones(int);
 };

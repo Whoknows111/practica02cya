@@ -1,27 +1,26 @@
 #include "symbol.h"
 
-Symbol::Symbol(char newChar)
+Symbol::Symbol(std::string newString) : mySymbol_(newString)
 {
-  addChar(newChar);
+}
+
+Symbol::Symbol() : mySymbol_("") {
 }
 
 Symbol::~Symbol()
 {
 }
 
-void Symbol::addChar(char newChar) {
-  Symbol::mySymbol_.push_back(newChar);
+void Symbol::addToSymbol(std::string newString) {
+  Symbol::mySymbol_ += newString;
 }
 
 void Symbol::printSymbol(){
-  for (int i = 0; i < Symbol::mySymbol_.size(); i++){
-    std::cout << Symbol::mySymbol_[i];
-  }
-  std::cout << std::endl;
+  std::cout << Symbol::mySymbol_ /*<< std::endl*/;
 }
 
-char Symbol::getSymbolValue(){
-  return Symbol::mySymbol_[0];
+std::string Symbol::getSetSymbol(){
+  return Symbol::mySymbol_;
 }
 
 

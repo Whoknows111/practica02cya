@@ -15,12 +15,12 @@ void Alphabet::addSymbol(Symbol newSymbol){
 }
 
 void Alphabet::printAlphabet(){
-  /*std::cout << "ALPHABET = {";
+  std::cout << "ALPHABET = {";
   for (int i = 0; i < Alphabet::arraySymbol_.size(); i++){
-    std::cout << Alphabet::arraySymbol_[i].printSymbol() ;
+    Alphabet::arraySymbol_[i].printSymbol() ;
     std::cout << ", ";
   }
-  std::cout << "}" << std::endl;*/
+  std::cout << "}" << std::endl;
 }
 
 

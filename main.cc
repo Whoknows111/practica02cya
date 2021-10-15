@@ -6,11 +6,23 @@
 
 int main () {
   
-  Symbol A('a');
-  A.addChar('b');
-  A.printSymbol();
+  Symbol A;
+  //std::string myCadena("holita");
+  Symbol B("holaquetal");
+  
+  B.printSymbol();
 
-  Strings B();
+  A.addToSymbol("adios");
+  B.addToSymbol("hey");
+
+  A.printSymbol();
+  B.printSymbol();
+  
+  Alphabet C(A);
+  C.printAlphabet();
+  C.addSymbol(B);
+  C.printAlphabet();
+
   
 
   return 0;
